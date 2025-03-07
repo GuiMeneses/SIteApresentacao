@@ -1,0 +1,51 @@
+
+
+// Estrutura dos contents
+@mixin content(
+    //Alinhar itens
+    $just_items,
+    //Pading
+    $pd_l, $pd_r, $pd_t, $pd_b, 
+    //Margin
+    $marg_l, $marg_r, 
+    //Img size
+    $img_size,
+    //Img margin
+    $img_marg_l,$img_marg_r,$img_marg_t,$img_marg_b,
+    //Img img_float
+    $img_float,
+    //Img color_shadow
+    $color_shadow,
+    //Font size
+    $font_size,
+    //hn hn_aling, hn_size, hn_margin
+    $hn_aling, $hn_size, $hn_margin,
+    ){
+
+    padding: $pd_t $pd_r $pd_b $pd_l;
+    overflow: auto;
+    margin-left: $marg_l;
+    margin-right: $marg_r;
+    justify-items: $just_items;
+    
+
+    img{
+        float: $img_float;
+        width: $img_size;
+        margin: $img_marg_t $img_marg_r $img_marg_b $img_marg_l;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px $color_shadow;
+    }
+
+    .hn_{
+        text-align: $hn_aling;
+        font-size: $hn_size;
+        margin: $hn_margin;
+    }
+
+    p{
+        font-size: $font_size;
+        text-align: justify;
+        hyphens: auto;
+    }
+}
