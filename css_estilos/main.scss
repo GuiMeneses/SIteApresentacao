@@ -1,190 +1,19 @@
 @import './content1.scss';
-// @import './content2.scss';
-
-
-:root{
-    --height_header: 100vh;
-
-
-    // Botao header
-    --cor_texto: #3b3b3b;
-    --cor_borda: rgba(0, 0, 0, 0);
-    --espessura_borda: 2px;
-    --tipo_borda: solid;
-    --cor_bg: #ff8d47;
-
-    // hover
-    --cor_texto_hover: rgb(0, 0, 0,1);
-    --cor_borda_hover: rgb(0, 0, 0,1);
-    --espessura_borda_hover: 2px;
-    --tipo_borda_hover: solid;
-    --cor_bg_hover: #f0823f;
-
-    // Fim Botao header
-
-
-    // Botao redes
-
-    // FaceBoock
-    --img_fc: url('../imgs/facebook_cinza.png');
-    --img_fc_hover: url('../imgs/facebook_preto.png');
-
-    // Instagram
-    --img_ins: url('../imgs/instagram_cinza.png');
-    --img_ins_hover: url('../imgs/instagram_preto.png');
-
-    // LinkedIn
-    --img_li: url('../imgs/linkedin_cinza.png');
-    --img_li_hover: url('../imgs/linkedin_preto.png');
-
-    // X
-    --img_x: url('../imgs/twitter_cinza.png');
-    --img_x_hover: url('../imgs/twitter_preto.png');
-
-    // Fim Botao redes
-
-    
-
-}
-
-/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
-@media only screen and (min-width: 1200px) {
-    :root{
-        --height_header: 100vh;
-    }
-}
-
+@import './header';
+@import './footer';
+@import './link_whatsapp';
 
 *{
     margin: 0;
     padding: 0;
 }
 
+
 body{
     background-color: rgb(201, 178, 178);
     margin: 0;
 }
 
-header{
-    height: var(--height_header);
-
-    p{
-        font-size: 80px;
-        width: 100%;
-        padding-top: 150px;
-        text-align: center;
-        hyphens: auto;
-    }
-    
-}
-
-#img_bg{
-    position: fixed;
-    top: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-
-}
-
-main{
-    background-color: rgb(201, 178, 178);
-}
-
-.nav_principal{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 6%;
-    padding-right: 6%;
-}
-
-.links_redes{
-    display: inline-flex;
-    float: right;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    align-items: center;
-
-    .botoes{
-        display: inline;
-        a{
-            color: var(--cor_texto);
-            border: var(--espessura_borda) var(--cor_borda) var(--tipo_borda);
-            background-color: var(--cor_bg);
-            margin: 10px;
-            border-radius: 20px;
-            padding-left: 14px;
-            padding-right: 10px;
-            padding-top: 1px;
-            padding-bottom: 2px;
-            text-decoration: none;
-        }
-
-        a:hover{
-            color: var(--cor_texto_hover);
-            border: var(--espessura_borda_hover) var(--cor_borda_hover) var(--tipo_borda_hover);
-            background-color: var(--cor_bg_hover);
-        }
-    }
-
-    a{
-        margin-left: 20px;
-    }
-
-    img{
-        width:40px;
-    }
-
-    #a_Faceboock{
-        img{
-            background-image: var(--img_fc);
-            background-size: 40px;
-        }
-    }
-
-    #a_Faceboock:hover{
-        img{
-            background-image: var(--img_fc_hover);
-        }
-    }
-
-    #a_Instagram{
-        img{
-            background-image: var(--img_ins);
-            background-size: 40px;
-        }
-    }
-    #a_Instagram:hover{
-        img{
-            background-image: var(--img_ins_hover);
-        }
-    }
-
-    #a_LinkedIn{
-        img{
-            background-image: var(--img_li);
-            background-size: 40px;
-        }
-    }
-    #a_LinkedIn:hover{
-        img{
-            background-image: var(--img_li_hover);
-        }
-    }
-
-    #a_X{
-        img{
-            background-image: var(--img_x);
-            background-size: 40px;
-        }
-    }
-    #a_X:hover{
-        img{
-            background-image: var(--img_x_hover);
-        }
-    }
 
 
-}
+

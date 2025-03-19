@@ -1,0 +1,159 @@
+@use "mixins" as mx;
+
+footer{
+    --cor_texto:rgb(248, 200, 181);
+    --tamanho_texto: 20px;
+    --tamanho_h3: 30px;
+    justify-items: center;
+    background-color: #c91801;
+    padding: 10px 10px 10px 10px;
+
+    .footer_info_empresa{
+        justify-items: center;
+        color: var(--cor_texto);
+        p{
+            margin: 5px;
+        }
+    }
+
+    .footer_redes{
+        
+        --cor_icon_hover: rgb(206, 174, 161);
+        --tamanho_icon: 40px;
+        --cor_icon: rgb(204, 153, 111);
+        --icon_margin: 10px;
+
+        #footer_faceboock{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/facebook_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+            );
+        }
+
+        #footer_instagram{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/instagram_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+            );
+        }
+
+        #footer_linkedin{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/linkedin_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+            );
+        }
+
+        #footer_x{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/twitter_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+            );
+        }
+    }
+    
+    h3{
+        font-size: var(--tamanho_h3);
+    }
+
+    p{
+        color: var(--cor_texto);
+        font-size: var(--tamanho_texto);
+    }
+}
+
+
+@media only screen and (max-width: 300px) {
+    
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (min-width: 300px) {
+    
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (min-width: 450px) {
+    footer{
+        --tamanho_texto: 20px;
+        --tamanho_h3: 27px;
+    }
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    footer{
+        --tamanho_texto: 20px;
+        --tamanho_h3: 30px;
+
+        .footer_redes{
+            --tamanho_icon: 50px;
+            margin: 20px;
+        }
+    }
+    
+}
+//4k
+@media only screen and (min-width: 2560px) {
+    footer{
+        --tamanho_texto: 50px;
+        --tamanho_h3: 70px;
+
+        .footer_redes{
+            --tamanho_icon: 100px;
+            margin: 30px;
+        }
+    }
+
+}

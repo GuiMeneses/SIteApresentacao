@@ -1,0 +1,224 @@
+@use "mixins" as mx;
+
+:root{
+    --height_header: 100vh;
+}
+
+header{
+    height: var(--height_header);
+
+    p{
+        font-size: 80px;
+        width: 100%;
+        padding-top: 150px;
+        text-align: center;
+        hyphens: auto;
+    }
+    
+}
+
+#img_bg{
+    @include mx.img_bg_fix();
+}
+
+main{
+    background-color: rgb(201, 178, 178);
+}
+
+.nav_principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+#icon_empresa{
+    display: inline-flex;
+    @include mx.icon_ajustavel(
+        $arquivo_png: url('../imgs/unit-testing.png'),
+        //Tamnho do icone
+        $tamanho_icon: 100px,
+        //Cor do icone
+        $cor_icon: #eeb20c,
+        //Cor do icon em hover
+        $cor_icon_hover: rgb(170, 147, 46),
+                
+    );
+}
+
+.links_redes{
+
+    display: inline-flex;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    align-items: center;
+
+    //Icons
+    --cor_icon_hover: rgb(34, 34, 34);
+    --tamanho_icon: 40px;
+    --cor_icon: rgb(80, 63, 51);
+    --icon_margin: 10px;
+    //Fim Icons
+
+    //Botões
+    --bt_font_size: 20px;
+    --bt_espessura_borda: 2px;
+    --bt_border_radius: 20px;
+    --bt_margin: 10px;
+
+
+    .botoes{
+        #bt_inicio{
+            @include mx.bt_ajustavel(
+                $bt_font_size: var(--bt_font_size), 
+                $bt_font_size_hover: var(--bt_font_size),
+                $bt_espessura_borda: var(--bt_espessura_borda),
+                $bt_espessura_borda_hover: var(--bt_espessura_borda),
+                $bt_border_radius: var(--bt_border_radius),
+                $bt_margin: var(--bt_margin),
+            );
+        }
+        #bt_servicos{
+            @include mx.bt_ajustavel(
+                $bt_font_size: var(--bt_font_size), 
+                $bt_font_size_hover: var(--bt_font_size),
+                $bt_espessura_borda: var(--bt_espessura_borda),
+                $bt_espessura_borda_hover: var(--bt_espessura_borda),
+                $bt_border_radius: var(--bt_border_radius),
+                $bt_margin: var(--bt_margin),
+            );
+        }
+
+    }
+    
+
+    #header_Faceboock{
+        @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/facebook_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+        );
+    }
+
+    #header_Instagram{
+        @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/instagram_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+        );
+    }
+
+    #header_LinkedIn{
+        @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/linkedin_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+        );
+    }
+
+    #header_X{
+        @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/twitter_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+                //Margin icon
+                var(--icon_margin),
+                
+        );
+    }
+}
+
+
+
+@media only screen and (max-width: 300px) {
+    
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (min-width: 300px) {
+    
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (min-width: 450px) {
+    
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    .links_redes{
+        //Icons
+    --tamanho_icon: 40px;
+    --icon_margin: 10px;
+    //Fim Icons
+
+    //Botões
+    --bt_font_size: 20px;
+    --bt_espessura_borda: 2px;
+    --bt_border_radius: 20px;
+    --bt_margin: 10px;
+    }
+}
+//4k
+@media only screen and (min-width: 2560px) {
+    .links_redes{
+        //Icons
+    --tamanho_icon: 70px;
+    --icon_margin: 20px;
+    //Fim Icons
+
+    //Botões
+    --bt_font_size: 40px;
+    --bt_espessura_borda: 3px;
+    --bt_border_radius: 30px;
+    --bt_margin: 20px;
+    }
+
+}
