@@ -1,0 +1,17 @@
+@use "mixins" as mx;
+
+.button_menu{
+    @include mx.menu_ajustavel(
+    $menu_zise: 50px,
+    $menu_border_radius:20%,
+    $menu_bg_color: #503F33,
+    $menu_line_height: 5px,
+    $menu_line_width: 70%,
+    $menu_line_color: #c96222,
+    $menu_line_border_radius: 10px,
+    $menu_line_space: 8px,
+    );
+
+    
+
+}

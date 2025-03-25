@@ -150,3 +150,52 @@
         background-color: $bt_cor_bg_hover;
     }
 }
+
+@mixin menu_ajustavel(
+    $menu_zise: 50px,
+    $menu_border_radius:20%,
+    $menu_bg_color: rgb(66, 45, 45),
+    $menu_line_height: 5px,
+    $menu_line_width: 80%,
+    $menu_line_color: rgb(75, 100, 100),
+    $menu_line_border_radius: 10px,
+    $menu_line_space: 8px,
+    ){
+
+    height: $menu_zise;
+    width: $menu_zise;
+    border: none;
+    border-radius: $menu_border_radius;
+    background-color: $menu_bg_color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+        
+    div{
+        height: $menu_line_height;
+        width: $menu_line_width;
+        background-color: $menu_line_color;
+        border-radius: $menu_line_border_radius;
+        position: absolute;
+    }
+
+    .div_line1{
+        top: $menu_line_space;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .div_line2{
+        opacity: 0%;
+        align-self: center;
+        transition: transform, opacity, 1s ease-in-out;
+    }
+    .div_line3{
+        align-self: center;
+        transition: transform, opacity, 1s ease-in-out;
+
+    }
+    .div_line4{
+        bottom: $menu_line_space;
+        transition: opacity 0.5s ease-in-out;
+    }
+}

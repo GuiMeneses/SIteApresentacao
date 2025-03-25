@@ -468,11 +468,47 @@ footer p {
   bottom: 0px;
   right: 5px;
   margin: 0 10px 10px 0;
+  z-index: 5;
 }
 .link_whatsapp img {
   border-radius: 100%;
   width: var(--img_size);
   box-shadow: 10px 10px 20px rgba(228, 0, 0, 0.37);
+}
+
+.button_menu {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 20%;
+  background-color: #503F33;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.button_menu div {
+  height: 5px;
+  width: 70%;
+  background-color: #c96222;
+  border-radius: 10px;
+  position: absolute;
+}
+.button_menu .div_line1 {
+  top: 8px;
+  transition: opacity 0.5s ease-in-out;
+}
+.button_menu .div_line2 {
+  opacity: 0%;
+  align-self: center;
+  transition: transform, opacity, 1s ease-in-out;
+}
+.button_menu .div_line3 {
+  align-self: center;
+  transition: transform, opacity, 1s ease-in-out;
+}
+.button_menu .div_line4 {
+  bottom: 8px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 * {
