@@ -6,15 +6,14 @@
 
 header{
     height: var(--height_header);
-
-    p{
-        font-size: 80px;
-        width: 100%;
-        padding-top: 150px;
-        text-align: center;
-        hyphens: auto;
-    }
-    
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #img_bg{
@@ -27,6 +26,7 @@ main{
 
 .nav_principal{
     display: flex;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
@@ -44,14 +44,13 @@ main{
         //Cor do icone
         $cor_icon: #eeb20c,
         //Cor do icon em hover
-        $cor_icon_hover: rgb(170, 147, 46),
-                
+        $cor_icon_hover: rgb(170, 147, 46),      
     );
 }
 
 .links_redes{
 
-    display: inline-flex;
+    display: none;
     padding-top: 14px;
     padding-bottom: 14px;
     align-items: center;
@@ -68,10 +67,10 @@ main{
     --bt_espessura_borda: 2px;
     --bt_border_radius: 20px;
     --bt_margin: 10px;
-
+    //Fim botões
 
     .botoes{
-        #bt_inicio{
+        a{
             @include mx.bt_ajustavel(
                 $bt_font_size: var(--bt_font_size), 
                 $bt_font_size_hover: var(--bt_font_size),
@@ -81,49 +80,35 @@ main{
                 $bt_margin: var(--bt_margin),
             );
         }
-        #bt_servicos{
-            @include mx.bt_ajustavel(
-                $bt_font_size: var(--bt_font_size), 
-                $bt_font_size_hover: var(--bt_font_size),
-                $bt_espessura_borda: var(--bt_espessura_borda),
-                $bt_espessura_borda_hover: var(--bt_espessura_borda),
-                $bt_border_radius: var(--bt_border_radius),
-                $bt_margin: var(--bt_margin),
-            );
-        }
-
     }
-    
 
     #header_Faceboock{
         @include mx.icon_ajustavel(
-                //Img arquivo .png
-                url('../imgs/facebook_preto.png'),
-                //Tamnho do icone
-                var(--tamanho_icon),
-                //Cor do icone
-                var(--cor_icon),
-                //Cor do icon em hover
-                var(--cor_icon_hover),
-                //Margin icon
-                var(--icon_margin),
-                
+            //Img arquivo .png
+            url('../imgs/facebook_preto.png'),
+            //Tamnho do icone
+            var(--tamanho_icon),
+            //Cor do icone
+            var(--cor_icon),
+            //Cor do icon em hover
+            var(--cor_icon_hover),
+            //Margin icon
+            var(--icon_margin),
         );
     }
 
     #header_Instagram{
         @include mx.icon_ajustavel(
-                //Img arquivo .png
-                url('../imgs/instagram_preto.png'),
-                //Tamnho do icone
-                var(--tamanho_icon),
-                //Cor do icone
-                var(--cor_icon),
-                //Cor do icon em hover
-                var(--cor_icon_hover),
-                //Margin icon
-                var(--icon_margin),
-                
+            //Img arquivo .png
+            url('../imgs/instagram_preto.png'),
+            //Tamnho do icone
+            var(--tamanho_icon),
+            //Cor do icone
+            var(--cor_icon),
+            //Cor do icon em hover
+            var(--cor_icon_hover),
+            //Margin icon
+            var(--icon_margin),
         );
     }
 
@@ -160,20 +145,163 @@ main{
     }
 }
 
+.button_menu{
+    @include mx.menu_ajustavel(
+    $menu_zise: 50px,
+    $menu_border_radius:20%,
+    $menu_bg_color: #503F33,
+    $menu_line_height: 5px,
+    $menu_line_width: 70%,
+    $menu_line_color: #c96222,
+    $menu_line_border_radius: 10px,
+    $menu_line_space: 8px,
+    );
+}
 
+
+
+.div_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 79.2vh;
+    width: 100%;
+    margin: 0px 20px 0 20px;
+
+    a{
+        font-size: 30px;
+        color: #503F33;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .div_redes_menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 110px;
+        
+        
+        a{
+            padding: 0;
+        }
+
+
+        //Icons
+        --cor_icon_hover: rgb(0, 0, 0);
+        --tamanho_icon: 50px;
+        --cor_icon: rgb(34, 34, 34);
+        --padding_lateral: 80px;
+        //Fim Icons
+
+        #menu_Faceboock{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/facebook_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+            );
+            padding-left: var(--padding_lateral);
+        }
+
+        #menu_Instagram{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/instagram_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+            );
+        }
+
+        #menu_LinkedIn{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/linkedin_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+            );
+        }
+
+        #menu_X{
+            @include mx.icon_ajustavel(
+                //Img arquivo .png
+                url('../imgs/twitter_preto.png'),
+                //Tamnho do icone
+                var(--tamanho_icon),
+                //Cor do icone
+                var(--cor_icon),
+                //Cor do icon em hover
+                var(--cor_icon_hover),
+            );
+            padding-right: var(--padding_lateral);
+        }
+    }
+
+    transition: mask-position 1s ease-in-out;
+    @include mx.gradiente_ajustavel(100vh, 115vh, 130vh);
+    mask-position:0vh -130vh;
+    mask-repeat: no-repeat;
+    mask-size: 100% 130vh;
+}
+
+
+.div_bg_menu{
+    position: absolute;
+    background-color: #fe762193;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+    display: flex;
+
+    transition: mask-position 1s ease-in-out;
+    @include mx.gradiente_ajustavel(100vh, 115vh, 130vh);
+    mask-position:0vh -130vh;
+    mask-repeat: no-repeat;
+    mask-size: 100% 130vh;
+}
 
 @media only screen and (max-width: 300px) {
-    
+    .div_menu{
+        .div_redes_menu{
+            --padding_lateral: 20px;
+            --tamanho_icon: 30px;
+        }
+    }
 }
 
 /* Smartphones (600px para baixo) */
 @media only screen and (min-width: 300px) {
+    .div_menu{
+        .div_redes_menu{
+            --padding_lateral: 20px;
+            --tamanho_icon: 40px;
+        }
+    }
     
 }
 
 /* Smartphones (600px para baixo) */
 @media only screen and (min-width: 450px) {
-    
+    .div_menu{
+        .div_redes_menu{
+            --padding_lateral: 80px;
+            --tamanho_icon: 50px;
+        }
+    }
 }
 
 /* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
@@ -183,7 +311,19 @@ main{
 
 /*Dispostivos Médios (Tablets deitados, 768px para cima) */
 @media only screen and (min-width: 768px) {
-    
+    .button_menu{
+        display: none;
+    }
+    .div_menu{
+        display: none;
+    }
+    .div_bg_menu{
+        display: none;
+    }
+
+    .links_redes{
+        display: inline-flex;
+    }
 }
 
 /* Dispostivos Largos (laptops/desktops, 992px para cima) */

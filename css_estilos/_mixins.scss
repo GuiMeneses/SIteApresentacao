@@ -64,7 +64,7 @@
     //Cor do icon em hover
     $cor_icon_hover: #e2c337,
     //Margin icon
-    $icon_margin: 5px,
+    $icon_margin: 0px,
 
 ){
     text-decoration: none;
@@ -93,7 +93,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -5;
 }
 
 @mixin bt_ajustavel(
@@ -170,6 +170,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
         
     div{
         height: $menu_line_height;
@@ -181,21 +182,30 @@
 
     .div_line1{
         top: $menu_line_space;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
+        
     }
 
     .div_line2{
         opacity: 0%;
         align-self: center;
-        transition: transform, opacity, 1s ease-in-out;
+        transition: transform, opacity, 0.5s ease-in-out;
     }
     .div_line3{
         align-self: center;
-        transition: transform, opacity, 1s ease-in-out;
+        transition: transform, opacity, 0.5s ease-in-out;
 
     }
     .div_line4{
         bottom: $menu_line_space;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
     }
+}
+
+@mixin gradiente_ajustavel($primeiro_ponto, $segundo_ponto, $terceiro_ponto,){
+    mask-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 1) $primeiro_ponto,  
+        rgba(0, 0, 0, 0.5) $segundo_ponto,  
+        rgba(0, 0, 0, 0) $terceiro_ponto,
+    );
 }

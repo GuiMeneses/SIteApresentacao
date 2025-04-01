@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente de Opacidade</title>
+    <style>
+        .caixa {
+            width: 300px;
+            height: 400px;
+            background: red; /* Cor de fundo visível */
+            
+            /* Aplicando a máscara de opacidade */
+            -webkit-mask-image: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 1) 50%,  /* Totalmente visível até 50% */
+                rgba(0, 0, 0, 0.5) 60%, /* Transição entre 51% e 60% */
+                rgba(0, 0, 0, 0) 100%   /* Totalmente invisível de 61% até 100% */
+            );
+            mask-image: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 1) 50%,  
+                rgba(0, 0, 0, 0.5) 60%,  
+                rgba(0, 0, 0, 0) 100%
+            );
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caixa"></div>
+
+</body>
+</html>

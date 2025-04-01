@@ -6,7 +6,7 @@
     --hn_size: 10px;
     --hn_margin: 10px;
     --img_size: 100px;
-    --img_float: right;
+    --img_float: none;
     --p_size: 10px;
     --margin_size_l:10px;
     --margin_size_r:10px;
@@ -29,19 +29,21 @@
 
 .content2{
     @extend .content1;
-
-    
 }
 
 // Media Queries
-// Como o content vai se comportar em cada tela
-
-/* Smartphones (600px para baixo) */
+/* ax-width: 300px */
 @media only screen and (max-width: 300px) {
-    
+    .content1{
+        --hn_size: 35px;
+        --img_size: 90%;
+        --p_size: 25px;
+        --margin_size_l: 10px;   
+        --margin_size_r: 10px;   
+    }
 }
 
-/* Smartphones (600px para baixo) */
+/* min-width: 300px */
 @media only screen and (min-width: 300px) {
     .content1{
         --hn_size: 35px;
@@ -52,7 +54,7 @@
     }
 }
 
-/* Smartphones (600px para baixo) */
+/* min-width: 450px */
 @media only screen and (min-width: 450px) {
     .content1{
         --hn_size: 50px;
@@ -110,9 +112,9 @@
         --hn_margin: 40px;
         --img_size: 50%;
         --p_size: 30px;
-        --margin_size_l: 20vh;   
-        --margin_size_r: 15vh;
-        --img_marg_l: 10vh; 
+        --margin_size_l: 10vh;   
+        --margin_size_r: 10vh;
+        --img_marg_l: 2vh; 
     }
 
     .content2{
@@ -120,10 +122,10 @@
         --hn_margin: 40px;
         --img_size: 50%;
         --p_size: 30px;
-        --margin_size_l: 15vh;   
-        --margin_size_r: 20vh;
-        --img_marg_l: 2vh; 
-        --img_marg_r: 10vh; 
+        --margin_size_l: 10vh;   
+        --margin_size_r: 10vh;
+        --img_marg_l: 0vh; 
+        --img_marg_r: 5vh; 
     }
 }
 
@@ -134,9 +136,9 @@
         --hn_margin: 40px;
         --img_size: 50%;
         --p_size: 40px;
-        --margin_size_l: 20vh;   
-        --margin_size_r: 15vh;
-        --img_marg_l: 10vh; 
+        --margin_size_l: 10vh;   
+        --margin_size_r: 10vh;
+        --img_marg_l: 5vh;
     }
 
     .content2{
@@ -144,10 +146,10 @@
         --hn_margin: 40px;
         --img_size: 50%;
         --p_size: 40px;
-        --margin_size_l: 15vh;   
-        --margin_size_r: 20vh;
-        --img_marg_l: 2vh; 
-        --img_marg_r: 10vh; 
+        --margin_size_l: 10vh;   
+        --margin_size_r: 10vh;
+        --img_marg_l: 0vh; 
+        --img_marg_r: 5vh; 
     }
 }
 
