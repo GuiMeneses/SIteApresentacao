@@ -5,6 +5,95 @@
 @import './footer';
 @import './link_whatsapp';
 
+
+// Trocar cores
+    // ---------- Header ----------
+        // Icon principal
+            #icon_empresa{
+                --cor_icon:  #eeb20c;
+                --cor_icon_hover: #caa234;
+            }
+        // Icon principal fim
+
+        // Botoes links
+            .links_redes{
+                //Atributos Botão
+                --bt_text_color: #3b3b3b;
+                --bt_cor_borda: rgba(0, 0, 0, 0);
+                --bt_cor_bg: #ff8d47;
+
+                //Atributos Botão Hover
+                --bt_text_color_hover: #000000;
+                --bt_cor_borda_hover: rgb(0, 0, 0);
+                --bt_cor_bg_hover: #ff8337;
+            }
+        // Botoes linksfim
+
+        // Botoes redes
+            .links_redes{
+                --cor_icon: rgb(80, 63, 51);
+                --cor_icon_hover: rgb(0, 0, 0);
+            }
+        // Botoes redes fim
+
+        // Botão menu
+            .button_menu{
+                --button_menu_bg_color: #503F33;
+                --button_menu_line_color: #c96222;
+
+            }
+
+            .div_menu{
+                a{
+                    color: #503F33;
+                }
+                .div_redes_menu{
+                    --cor_icon_hover: rgb(0, 0, 0);
+                    --cor_icon: rgb(34, 34, 34);
+                }
+            }
+
+            .div_bg_menu{
+
+                background-color: #fe762193;
+            }
+        // Botão menu fim
+
+    // ---------- Header Fim ----------
+
+    //  ---------- Content ----------
+        main{
+            background-color: rgb(201, 178, 178);
+        }
+
+        .content1{
+            --color_shadow: rgba(95, 4, 4, 0.5);
+        }
+
+        .link_whatsapp{
+            img{
+                box-shadow: 10px 10px 20px rgba(228, 0, 0, 0.37);
+            }
+        }
+    //  ---------- Content Fim ----------
+
+    // ---------- Footer ----------
+    footer{
+        // Cores principais
+            --cor_texto:rgb(248, 200, 181);
+            --cor_bg: #c91801;
+        // Cores principais fim
+
+        // Icons redes
+            --icon_redes_cor: rgb(206, 174, 161);
+            --icon_redes_cor_hover: rgb(204, 153, 111);
+        // Icons redes fim
+    }
+    // ---------- Footer Fim ----------
+// Trocar cores fim
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +101,5 @@
 
 
 body{
-    background-color: rgb(201, 178, 178);
     margin: 0;
 }

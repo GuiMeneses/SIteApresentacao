@@ -1,11 +1,21 @@
 @use "mixins" as mx;
 
 footer{
-    --cor_texto:rgb(248, 200, 181);
+    // Cores principais
+        --cor_texto:rgb(248, 200, 181);
+        --cor_bg: #c91801;
+    // Cores principais fim
+    
+    // Icons redes
+        --icon_redes_cor: rgb(206, 174, 161);
+        --icon_redes_cor_hover: rgb(204, 153, 111);
+    // Icons redes fim
+    
+
     --tamanho_texto: 20px;
     --tamanho_h3: 30px;
     justify-items: center;
-    background-color: #c91801;
+    background-color: var(--cor_bg);
     padding: 10px 10px 10px 10px;
 
     .footer_info_empresa{
@@ -17,10 +27,9 @@ footer{
     }
 
     .footer_redes{
-        
-        --cor_icon_hover: rgb(206, 174, 161);
+        --cor_icon: var(--icon_redes_cor);
+        --cor_icon_hover: var(--icon_redes_cor_hover);
         --tamanho_icon: 40px;
-        --cor_icon: rgb(204, 153, 111);
         --icon_margin: 10px;
 
         #footer_faceboock{

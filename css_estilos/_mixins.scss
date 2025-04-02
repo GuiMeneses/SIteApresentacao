@@ -152,7 +152,7 @@
 }
 
 @mixin menu_ajustavel(
-    $menu_zise: 50px,
+    $menu_size: 50px,
     $menu_border_radius:20%,
     $menu_bg_color: rgb(66, 45, 45),
     $menu_line_height: 5px,
@@ -162,8 +162,8 @@
     $menu_line_space: 8px,
     ){
 
-    height: $menu_zise;
-    width: $menu_zise;
+    height: $menu_size;
+    width: $menu_size;
     border: none;
     border-radius: $menu_border_radius;
     background-color: $menu_bg_color;

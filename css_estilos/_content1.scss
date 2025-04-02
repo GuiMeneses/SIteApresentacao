@@ -1,5 +1,8 @@
 @use "mixins" as mx;
 
+main{
+    background-color: rgb(201, 178, 178);
+}
 
 .content1{
     // --just_items: none;
@@ -13,6 +16,8 @@
     --img_marg_l: 2vh;
     --img_marg_r: 2vh;
 
+    --color_shadow: rgba(95, 4, 4, 0.5);
+
     @include mx.content(
         // $just_items: var(--just_items),
         $hn_size: var(--hn_size),
@@ -24,6 +29,7 @@
         $marg_r: var(--margin_size_r),
         $img_marg_l: var(--img_marg_l),
         $img_marg_r: var(--img_marg_r),
+        $color_shadow: var(--color_shadow),
     );
 }
 
