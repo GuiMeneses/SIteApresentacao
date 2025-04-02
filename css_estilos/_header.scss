@@ -330,6 +330,11 @@ header{
 
 /*Dispostivos Médios (Tablets deitados, 768px para cima) */
 @media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
     .button_menu{
         display: none;
     }
@@ -343,11 +348,6 @@ header{
     .links_redes{
         display: inline-flex;
     }
-}
-
-/* Dispostivos Largos (laptops/desktops, 992px para cima) */
-@media only screen and (min-width: 992px) {
-    
 }
 
 /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
