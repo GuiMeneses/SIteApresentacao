@@ -5,8 +5,9 @@
 @import './footer';
 @import './link_whatsapp';
 
-
 // Trocar cores
+    
+
     // ---------- Header ----------
         // Icon principal
             #icon_empresa{
@@ -44,6 +45,7 @@
             }
 
             .div_menu{
+                visibility: hidden;
                 a{
                     color: #503F33;
                 }
@@ -54,10 +56,15 @@
             }
 
             .div_bg_menu{
-
+                visibility: hidden;
                 background-color: #fe762193;
             }
         // Botão menu fim
+        // Bgcolor da imagem de fundo
+            #img_bg{
+                background-color: rgb(201, 178, 178);
+            }
+        // Bgcolor da imagem de fundo fim
 
     // ---------- Header Fim ----------
 
@@ -97,6 +104,7 @@
 *{
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent; /* Remove o efeito azul */
 }
 
 

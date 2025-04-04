@@ -163,7 +163,7 @@ header {
   position: fixed;
   top: 0;
   margin: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -623,6 +623,7 @@ footer h3 {
 footer p {
   color: var(--cor_texto);
   font-size: var(--tamanho_texto);
+  white-space: nowrap;
 }
 
 /* Smartphones (600px para baixo) */
@@ -695,6 +696,9 @@ footer p {
   --button_menu_line_color: #c96222;
 }
 
+.div_menu {
+  visibility: hidden;
+}
 .div_menu a {
   color: #503F33;
 }
@@ -704,7 +708,12 @@ footer p {
 }
 
 .div_bg_menu {
+  visibility: hidden;
   background-color: rgba(254, 118, 33, 0.5764705882);
+}
+
+#img_bg {
+  background-color: rgb(201, 178, 178);
 }
 
 main {
@@ -729,6 +738,7 @@ footer {
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent; /* Remove o efeito azul */
 }
 
 body {
@@ -769,6 +779,10 @@ body {
 
 .div_bg_menu {
   background-color: rgba(0, 47, 255, 0.4509803922);
+}
+
+#img_bg {
+  background-color: rgb(178, 178, 201);
 }
 
 main {

@@ -104,6 +104,8 @@ footer{
     p{
         color: var(--cor_texto);
         font-size: var(--tamanho_texto);
+        white-space: nowrap;
+        
     }
 }
 
