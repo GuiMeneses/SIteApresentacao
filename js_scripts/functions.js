@@ -158,7 +158,4 @@ function trocar_visibility(
     
         div_.removeEventListener("transitionend", onTransition);
     });
-
 }
-
-
